@@ -13,7 +13,7 @@ services:
       - ./database/schemas:/var/lib/mysql
     networks:
       laravel_prod_net:
-        ipv4_address: 172.21.100.9
+        ipv4_address: 173.21.100.9
 
   laravel-prod:
     build:
@@ -26,7 +26,7 @@ services:
       - ./Finanzasdocker/public:/var/www/html
     networks:
       laravel_prod_net:
-        ipv4_address: 172.21.100.10
+        ipv4_address: 173.21.100.10
     depends_on:
       - laravel-db
 
@@ -40,4 +40,4 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.21.100.0/24
+        - subnet: 173.21.100.0/24
